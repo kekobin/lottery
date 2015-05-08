@@ -68,6 +68,8 @@
 			clearTimeout(this.options.timer);
 			this.options.index = -1;
 			this.options.prize = -1;
+
+			this.options.end();
 		}
 	};
 

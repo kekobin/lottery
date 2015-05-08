@@ -39,10 +39,18 @@
 <script type="text/javascript" src="js/lottery.js"></script>
 <script>
     $(function() {
+        var clicked;
         $("#lottery a").on("click", function() {
-            $("#lottery").lottery({
-                speed: 100
-            });
+            if(!clicked) {
+                clicked = true;
+
+                $("#lottery").lottery({
+                    speed: 100,
+                    end: function() {
+                        clicked = false;
+                    }
+                });
+            }
         });
     });
 </script>
