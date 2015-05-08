@@ -1,0 +1,50 @@
+<!DOCTYPE>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>jQuery九宫格大转盘抽奖代码 </title>
+<link rel="stylesheet" type="text/css" href="css/lottery.css" />
+</head>
+<body class="keBody">
+<h1 class="keTitle">jQuery九宫格大转盘抽奖代码</h1>
+<div class="kePublic">
+<!--效果html开始-->
+<div id="lottery">
+    <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+            <td class="lottery-unit lottery-unit-0"><img src="img/1.png"></td>
+            <td class="lottery-unit lottery-unit-1"><img src="img/2.png"></td>
+            <td class="lottery-unit lottery-unit-2"><img src="img/4.png"></td>
+            <td class="lottery-unit lottery-unit-3"><img src="img/3.png"></td>
+        </tr>
+        <tr>
+            <td class="lottery-unit lottery-unit-11"><img src="img/7.png"></td>
+            <td colspan="2" rowspan="2"><a href="#"></a></td>
+            <td class="lottery-unit lottery-unit-4"><img src="img/5.png"></td>
+        </tr>
+        <tr>
+            <td class="lottery-unit lottery-unit-10"><img src="img/1.png"></td>
+            <td class="lottery-unit lottery-unit-5"><img src="img/6.png"></td>
+        </tr>
+        <tr>
+            <td class="lottery-unit lottery-unit-9"><img src="img/3.png"></td>
+            <td class="lottery-unit lottery-unit-8"><img src="img/6.png"></td>
+            <td class="lottery-unit lottery-unit-7"><img src="img/8.png"></td>
+            <td class="lottery-unit lottery-unit-6"><img src="img/7.png"></td>
+        </tr>
+    </table>
+</div>
+
+<script type="text/javascript" src="js/lib/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/lottery.js"></script>
+<script>
+    $(function() {
+        $("#lottery a").on("click", function() {
+            $("#lottery").lottery({
+                speed: 100
+            });
+        });
+    });
+</script>
+</body>
+</html>
